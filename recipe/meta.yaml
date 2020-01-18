@@ -25,11 +25,10 @@ requirements:
     - six
     - jmespath
     - iso8601
-    - tree-format
-    - termcolor
+    - colored
     - toolz
     - eliot
-
+    - win-unicode-console #[win]
 test:
   commands:
     - eliot-tree --help
