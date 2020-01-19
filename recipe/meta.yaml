@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - eliot-tree = eliottree._cli:main
@@ -28,7 +27,7 @@ requirements:
     - colored
     - toolz
     - eliot
-    - win-unicode-console #[win]
+    - win-unicode-console  #[win]
 test:
   commands:
     - eliot-tree --help
