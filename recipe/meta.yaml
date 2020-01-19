@@ -17,17 +17,17 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
   run:
-    - python >=3.5
+    - python
     - six
     - jmespath
     - iso8601
     - colored
     - toolz
     - eliot
-    - win-unicode-console  #[win]
+    - win-unicode-console  # [win]
 test:
   commands:
     - eliot-tree --help
