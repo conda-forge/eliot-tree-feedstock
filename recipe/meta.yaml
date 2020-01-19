@@ -1,5 +1,5 @@
 {% set name = "eliot-tree" %}
-{% set version = "18.1.1" %}
+{% set version = "19.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,29 +7,27 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d492154cbc4093faf4492dbf503e87f51e27f89c7fc8697201157e0fb8d7d027
+  sha256: aac20b528944e6e3c9d33884104f06a8de3a1840ada15d07ea036e50b58cfba1
 
 build:
   number: 0
-  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - eliot-tree = eliottree._cli:main
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
   run:
-    - python >=3.5
+    - python
     - six
     - jmespath
     - iso8601
-    - tree-format
-    - termcolor
+    - colored
     - toolz
     - eliot
-
+    - win-unicode-console  # [win]
 test:
   commands:
     - eliot-tree --help
