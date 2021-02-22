@@ -10,7 +10,7 @@ source:
   sha256: 85397eafe4093cf43bb2cef796dcb75a6ec32f2d922869a6808b89c77f2294ef
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - eliot-tree = eliottree._cli:main
