@@ -1,5 +1,5 @@
 {% set name = "eliot-tree" %}
-{% set version = "19.0.1" %}
+{% set version = "21.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aac20b528944e6e3c9d33884104f06a8de3a1840ada15d07ea036e50b58cfba1
+  sha256: 85397eafe4093cf43bb2cef796dcb75a6ec32f2d922869a6808b89c77f2294ef
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - eliot-tree = eliottree._cli:main
 
@@ -37,9 +37,9 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Render Eliot logs as an ASCII tree'
+  summary: Render Eliot logs as an ASCII tree
 
-  description: 'Render Eliot logs as an ASCII tree'
+  description: Render Eliot logs as an ASCII tree
   doc_url: https://github.com/jonathanj/eliottree
   dev_url: https://github.com/jonathanj/eliottree
 
